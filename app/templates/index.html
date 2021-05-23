@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block title %}Projekt Pilgrimsfalk Sverige{% endblock %}
+
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Välkommen till Projekt Pilgrimsfalk Sverige!</h1>
+    <p>The local date and time is {{ moment(current_time).format('LLL') }}.</p>
+    <p>That was {{ moment(current_time).fromNow(refresh=true) }}</p>
+</div>
+<div>
+    {% if current_user.is_authenticated %}
+        <p>Hello, {{ current_user.name.capitalize() }}</p>
+    {% endif %}
+</div>
+
+<div class="page-header">
+    <h1>Registerera Falk unge</h1>
+</div>
+<div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+</div>
+
+{% endblock %}
