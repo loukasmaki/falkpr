@@ -78,7 +78,7 @@ class User(UserMixin, db.Model):
     #nextofkinphoneemail = db.Column(db.String(64), nullable=True)
 
     confirmed = db.Column(db.Boolean, default=False)
-    posts = db.relationship('Post', backref='author', lazy='dynamic')
+    #posts = db.relationship('Post', backref='author', lazy='dynamic')
     #order = db.relationship('Order', backref='user')
 
     def __init__(self, **kwargs):
@@ -177,7 +177,7 @@ login_manager.anonymous_user = AnonymousUser
 
 
 class Falk(db.Model):
-    __table__name = 'falkar'
+    __tablename__ = 'falkar'
     id = db.Column(db.Integer, primary_key=True)
     vikt = db.Column(db.Integer)
     kön = db.Column(db.String(1))
@@ -191,20 +191,53 @@ class Falk(db.Model):
     foto = db.Column(db.String(64))
     märkare = db.Column(db.String(64))
     övrigt = db.Column(db.String(128)) #Textareafield?
-    observation_id =db.Column(db.Integer)
+    observation_id = db.Column(db.Integer)
+    ringmärkt_datum = db.Column(db.DateTime)
 
 class Lokal(db.Model):
-    pass
+    __tablename_ = 'lokaler'
+    id = db.Column(db.Integer, primary_key=True)
+    namn = db.Column(db.String(64))
+    koordinatref = db.Column(db.String(64))
+    kommun = db.Column(db.String(128))
+    län = db.Column(db.String(128)) 
+    förälder_id = db.Column(db.Integer) # Vissa lokaler har en förälder
+    år_hittad = db.Column(db.DateTime) #Behöver specificera det här bättre
 
 class Återfynd(db.Model):
-    pass
+    __tablename__ = 'återfynd'
+    id = db.Column(db.Integer, primary_key=True)
+    hb = db.Column(db.String(20))
+    vb = db.Column(db.String(20))
+    levande = db.Column(db.Boolean)
 
 class Hylla(db.Model):
-    pass
+    __tablename__ = 'hyllor'
+    id = db.Column(db.Integer, primary_key=True)
+    beskrivning = db.Column(db.String(128))
+    lokal_id = db.Column(db.Integer)
+    
 
 class Observation(db.Model):
-    pass
+    __tablename__ = 'observationer'
+    id = db.Column(db.Integer, primary_key=True)
+    datum = db.Column(db.DateTime)
+    person = db.Column(db.String(64))
+    såg_falk = db.Column(db.Boolean)
+    bekräftad_häckning = db.Column(db.Boolean)
+    plats = db.Column(db.String(64))
+    datum = db.Column(db.DateTime)
 
 class Foto(db.Model):
-    pass
+    __tablename__ = 'foton'
+    id = db.Column(db.Integer, primary_key=True)
+    namn = db.Column(db.String(128))
+    fotograf = db.Column(db.String(128))
+    hyll_id = db.Column(db.Integer)
+    kategori = db.Column(db.String(64))
+    datum = db.Column(db.DateTime)
+    
 
+@login_manager.user_loader
+def load_user(user_id):
+    return User.query.get(int(user_id))

@@ -16,10 +16,21 @@
 </div>
 
 <div class="page-header">
-    <h1>Registerera Falk unge</h1>
+    <h1>Registerera Falk</h1>
 </div>
 <div class="col-md-4">
     {{ wtf.quick_form(form) }}
 </div>
+<ul class="posts">
+    {% for falk in falkar: %}
+    <li class="post">
+        <div>Id: {{ falk.id }}</div>
+        <div>HB: {{ falk.hb }}</div>
+        <div>VB: {{ falk.vb }}</div>
+        <div>Datum: {{ falk.datum }}</div>
 
-{% endblock %}
+    </li>
+    {% endfor %}
+
+    {% endblock %}
+</ul>
