@@ -5,6 +5,11 @@ from flask_login import UserMixin, AnonymousUserMixin
 from . import db, login_manager
 from datetime import datetime
 
+falk_återfynd = db.Table(
+    db.Column('falk_id', db.Integer, db.ForeignKey('falkar.id'), primary_key=True),
+    db.Column('återfynd_id', db.Integer, db.ForeignKey('återfynd.id'), primary_key=True)
+)
+
 class Permission:
     SCHEDULE = 1
     WRITE = 2
@@ -191,11 +196,12 @@ class Falk(db.Model):
     foto = db.Column(db.String(64))
     märkare = db.Column(db.String(64))
     övrigt = db.Column(db.String(128)) #Textareafield?
-    observation_id = db.Column(db.Integer)
     ringmärkt_datum = db.Column(db.DateTime)
+    lokal_id = db.Column(db.Integer, db.ForeignKey('lokaler.id'))
+    återfynd = db.relationship('Återfynd', secondary=falk_återfynd, lazy='subquery', backref=db.backref('falkar', lazy=True))
 
 class Lokal(db.Model):
-    __tablename_ = 'lokaler'
+    __tablename__ = 'lokaler'
     id = db.Column(db.Integer, primary_key=True)
     namn = db.Column(db.String(64))
     koordinatref = db.Column(db.String(64))

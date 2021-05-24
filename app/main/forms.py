@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, BooleanField, DecimalField, IntegerField, TextAreaField
+from wtforms import StringField, SelectField, BooleanField, DecimalField, IntegerField, TextAreaField, SubmitField
 from wtforms.validators import DataRequired, Length, Regexp, EqualTo
 from wtforms import ValidationError
 from ..models import User, Role
@@ -20,3 +20,4 @@ class RegistreraFalk(FlaskForm):
     märkare = StringField('Märkare', )
     övrigt = TextAreaField('Övrigt')
     plats = StringField('Plats')
+    submit = SubmitField('Submit')
