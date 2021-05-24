@@ -200,6 +200,9 @@ class Falk(db.Model):
     ringmärkt_datum = db.Column(db.DateTime)
     lokal_id = db.Column(db.Integer, db.ForeignKey('lokaler.id'))
     återfynd = db.relationship('Återfynd', secondary=falk_återfynd, lazy='subquery', backref=db.backref('falkar', lazy=True))
+    påse = db.Column(db.String(64))
+    närvarande = db.Column(db.String(128))
+    duvringar = db.Column(db.Boolean)
 
 class Lokal(db.Model):
     __tablename__ = 'lokaler'
