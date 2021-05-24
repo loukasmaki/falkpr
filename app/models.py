@@ -6,6 +6,7 @@ from . import db, login_manager
 from datetime import datetime
 
 falk_återfynd = db.Table(
+    'falk_återfynd',
     db.Column('falk_id', db.Integer, db.ForeignKey('falkar.id'), primary_key=True),
     db.Column('återfynd_id', db.Integer, db.ForeignKey('återfynd.id'), primary_key=True)
 )
@@ -209,6 +210,7 @@ class Lokal(db.Model):
     län = db.Column(db.String(128)) 
     förälder_id = db.Column(db.Integer) # Vissa lokaler har en förälder
     år_hittad = db.Column(db.DateTime) #Behöver specificera det här bättre
+    observationer = db.relationship('Observation', backref='lokaler', lazy=True)
 
 class Återfynd(db.Model):
     __tablename__ = 'återfynd'
@@ -231,7 +233,7 @@ class Observation(db.Model):
     person = db.Column(db.String(64))
     såg_falk = db.Column(db.Boolean)
     bekräftad_häckning = db.Column(db.Boolean)
-    plats = db.Column(db.String(64))
+    lokal_id = db.Column(db.Integer, db.ForeignKey('lokaler.id'))
     datum = db.Column(db.DateTime)
 
 class Foto(db.Model):
