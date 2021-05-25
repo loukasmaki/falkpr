@@ -12,6 +12,8 @@ class Config:
     EVENT_MAIL_SENDER = 'Falk Admin <devporco@gmail.com>'
     EVENT_ADMIN = os.environ.get('EVENT_ADMIN')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    RECAPTCHA_PUBLIC_KEY = '6LcUou4aAAAAAPhxM-yeiXGCAr8XWNiJfGN8fl15'
+    RECAPTCHA_PRIVATE_KEY = '6LcUou4aAAAAAJgGFCXUvJ3djk8KKr9JXhZBhCjs'
 
     @staticmethod
     def init_app(app):
