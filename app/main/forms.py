@@ -1,9 +1,9 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, BooleanField, DecimalField, IntegerField, TextAreaField, SubmitField
+from wtforms import StringField, SelectField, BooleanField, DecimalField, IntegerField, TextAreaField, SubmitField, DateTimeField
 from wtforms.validators import DataRequired, Length, Regexp, EqualTo
 from wtforms import ValidationError
 from ..models import User, Role
-from wtforms.ex.sqlalchemy.fields import QuerySelectField
+from wtforms.ext.sqlalchemy.fields import QuerySelectField
 from .. import db
 
 class RegistreraFalk(FlaskForm):
@@ -19,5 +19,10 @@ class RegistreraFalk(FlaskForm):
     foto = StringField('Foto, angiven kamera med foton', validators=[DataRequired()])
     märkare = StringField('Märkare', validators=[DataRequired()])
     övrigt = TextAreaField('Övrigt')
-    plats = QuerySelectorField('Plats', validators=[DataRequired()])
+    #plats = QuerySelectField('Plats', validators=[DataRequired()])
+    plats = StringField('Plats', validators=[DataRequired()])
+    ringmärkt_datum = DateTimeField('Datum', )
+    påse = StringField('Påse')
+    närvarande = StringField('Närvarande')
+    duvringar = BooleanField('Duvringar')
     submit = SubmitField('Submit')

@@ -10,7 +10,14 @@ from datetime import datetime
 @main.route('/', methods=['GET', 'POST'])
 #@login_required
 def index():
+    
+    return render_template('index.html')
+
+@main.route('/registrera', methods=['GET', 'POST'])
+@login_required
+def registrera_falk():
     form = RegistreraFalk()
+
     if form.validate_on_submit():
         falk = Falk(
             vikt = form.vikt.data,
@@ -24,12 +31,16 @@ def index():
             kräva = form.kräva.data,
             foto = form.foto.data,
             märkare = form.märkare.data,
-            övrigt = form.övrigt.data,
             lokal_id = form.plats.data,
+            ringmärkt_datum = form.datum.data,
+            påse = form.påse.data,
+            närvarande = form.närvarande.data,
+            duvringar = form.duvringar.data,
+            övrigt = form.övrigt.data,
         )
         db.session.add(falk)
         db.session.commit()
         return redirect(url_for('auth.login'))
 
         flash('Falk Registrerad')
-    return render_template('index.html', current_time=datetime.utcnow(), form=form)
+    return render_template('registrera_falk.html', form=form)

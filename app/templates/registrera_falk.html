@@ -4,14 +4,12 @@
 
 
 {% block page_content %}
+
 <div class="page-header">
-    <h1>Välkommen till Projekt Pilgrimsfalk Sverige!</h1>
-    
+    <h1>Registerera Falk</h1>
 </div>
-<div class="col-md-5">
-    <p>
-        Detta är ett verktyg för att registrera falkungar vid ringmärkning
-    </p>
+<div class="col-md-4">
+    {{ wtf.quick_form(form) }}
 </div>
 
 {% endblock %}
