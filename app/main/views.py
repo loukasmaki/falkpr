@@ -31,16 +31,22 @@ def registrera_falk():
             kräva = form.kräva.data,
             foto = form.foto.data,
             märkare = form.märkare.data,
-            lokal_id = form.plats.data,
+            lokal_id = form.plats.data.id,
             ringmärkt_datum = form.datum.data,
-            påse = form.påse.data,
-            närvarande = form.närvarande.data,
-            duvringar = form.duvringar.data,
+            #påse = form.påse.data,
+            #närvarande = form.närvarande.data,
+            #duvringar = form.duvringar.data,
             övrigt = form.övrigt.data,
         )
         db.session.add(falk)
         db.session.commit()
-        return redirect(url_for('auth.login'))
-
+        return redirect(url_for('main.registrerar_falk'))
+        
         flash('Falk Registrerad')
     return render_template('registrera_falk.html', form=form)
+
+@main.route('/falkar', methods=['GET'])
+@login_required
+def falkar():
+    falkar = Falk.query.order_by(Falk.id).all()
+    return render_template('falkar.html', falkar=falkar)

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Projekt Pilgrimsfalk Sverige - Falkar{% endblock %}
+
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Registrerade Falkar</h1>
+    
+</div>
+<ul class="">
+    {% for falk in falkar %}
+    <li><h3>{{ falk.id}}</h3></li>
+    <li>{{ falk.hb}}</li>
+    <li>{{ falk.vb}}</li>
+    <li>{{ falk.ringmärkning_datum }}</li>
+    {% endfor %}
+
+</ul>
+<div class="col-md-5">
+    
+</div>
+
+{% endblock %}

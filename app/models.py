@@ -197,7 +197,7 @@ class Falk(db.Model):
     foto = db.Column(db.String(64))
     märkare = db.Column(db.String(64))
     övrigt = db.Column(db.String(128)) #Textareafield?
-    ringmärkt_datum = db.Column(db.DateTime)
+    ringmärkt_datum = db.Column(db.DateTime(), default=datetime.utcnow)
     lokal_id = db.Column(db.Integer, db.ForeignKey('lokaler.id'))
     återfynd = db.relationship('Återfynd', secondary=falk_återfynd, lazy='subquery', backref=db.backref('falkar', lazy=True))
     påse = db.Column(db.String(64))
@@ -214,6 +214,9 @@ class Lokal(db.Model):
     förälder_id = db.Column(db.Integer) # Vissa lokaler har en förälder
     år_hittad = db.Column(db.DateTime) #Behöver specificera det här bättre
     observationer = db.relationship('Observation', backref='lokaler', lazy=True)
+
+    def __str__(self):
+        return self.namn
 
 class Återfynd(db.Model):
     __tablename__ = 'återfynd'
