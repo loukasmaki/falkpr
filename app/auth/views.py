@@ -71,13 +71,17 @@ def register():
 @auth.route('/confirm/<token>')
 @login_required
 def confirm(token):
+    print("In confirm function!!")
     if current_user.confirmed:
+        print("IF CURRENT USER CONFIRMED")
         return redirect(url_for('main.index'))
     if current_user.confirm(token):
+        print("IF CURRENT USER TOKEN")
         db.session.commit()
         flash('You have confirmed your account. Thanks!')
     else:
         flash('The confirmation link is invalid or has expired.')
+    print("Done with this")
     return redirect(url_for('main.index'))
 
 

@@ -28,7 +28,7 @@ class RegistreraFalk(FlaskForm):
     övrigt = TextAreaField('Övrigt')
     plats = QuerySelectField('Plats', validators=[DataRequired()], query_factory=hitta_lokaler)
     #plats = StringField('Plats', validators=[DataRequired()])
-    datum = DateField('Datum', format='%Y-%m-%d')
+    datum = DateField('Datum', format='%Y-%m-%d', validators=[DataRequired()])
     #påse = StringField('Påse')
     #närvarande = StringField('Närvarande')
     #duvringar = BooleanField('Duvringar')

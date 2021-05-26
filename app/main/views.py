@@ -40,7 +40,7 @@ def registrera_falk():
         )
         db.session.add(falk)
         db.session.commit()
-        return redirect(url_for('main.registrerar_falk'))
+        return redirect(url_for('main.registrera_falk'))
         
         flash('Falk Registrerad')
     return render_template('registrera_falk.html', form=form)
