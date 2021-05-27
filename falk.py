@@ -2,7 +2,7 @@ import os
 import click
 from app import create_app, db, mail
 from app.models import User, Role
-from flask_migrate import Migrate
+from flask_migrate import Migrate, upgrade
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 migrate = Migrate(app,db)
@@ -22,3 +22,13 @@ def test():
     #else:
     tests = unittest.TestLoader().discover('tests')
     unittest.TextTestRunner(verbosity=2).run(tests)
+
+
+#@manager.command
+#def deploy():
+#    """Run deployment tasks"""
+#    # Migrate Database to latest revision
+#    upgrade()
+
+    # Create or update user Roles
+#    Role.insert_roles()
