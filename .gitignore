@@ -1,6 +1,7 @@
 __pycache__/
 config.sh
 migrations/
+migrations_old
 venv/
 .env
 tempstorage.txt
