@@ -3,6 +3,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'ssscccchhuperscheeecreeeet'
+    MAIL_USE_TLS = True
     MAIL_SERVER = os.environ.get('MAIL_SERVER', 'smtp.googlemail.com')
     MAIL_PORT = int(os.environ.get('MAIL_PORT', '587'))
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS', 'true').lower() in ['true', 'on', '1']
@@ -33,7 +34,7 @@ class ProductionConfig(Config):
 
     @classmethod
     def init_app(cls, app):
-        Config.init(app)
+        Config.init_app(app)
 
         #Email errors to the administrators
         import logging

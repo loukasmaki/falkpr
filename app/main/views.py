@@ -27,7 +27,7 @@ def registrera_falk():
             hp10 = form.hp10.data,
             hp7 = form.hp7.data,
             sp = form.sp.data,
-            ålder = form.ålder.data,
+            dagar_17 = form.dagar_17.data,
             kräva = form.kräva.data,
             foto = form.foto.data,
             märkare = form.märkare.data,

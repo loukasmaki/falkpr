@@ -21,7 +21,7 @@ class RegistreraFalk(FlaskForm):
     hp10 = DecimalField('hp10', validators=[DataRequired()])
     hp7 = DecimalField('hp7', validators=[DataRequired()])
     sp = DecimalField('sp', validators=[DataRequired()])
-    ålder = DecimalField('Ålder', validators=[DataRequired()])
+    dagar_17 = DecimalField('17 dagar', validators=[DataRequired()])
     kräva = SelectField('Kräva', choices=[('Tom'), ('Halvfull'), ('Full')])
     foto = StringField('Foto, angiven kamera med foton', validators=[DataRequired()])
     märkare = StringField('Märkare', validators=[DataRequired()])

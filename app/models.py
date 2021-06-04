@@ -192,7 +192,7 @@ class Falk(db.Model):
     hp10 = db.Column(db.Integer)
     hp7 = db.Column(db.Integer)
     sp = db.Column(db.Integer)
-    ålder = db.Column(db.Integer)
+    dagar_17 = db.Column(db.Integer)
     kräva = db.Column(db.String(10))
     foto = db.Column(db.String(64))
     märkare = db.Column(db.String(64))

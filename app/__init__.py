@@ -15,7 +15,7 @@ moment = Moment()
 db = SQLAlchemy()
 
 login_manager = LoginManager()
-login_manager.login_view = 'auth.view'
+login_manager.login_view = 'auth.login'
 
 def create_app(config_name):
     #config_name = 'development'

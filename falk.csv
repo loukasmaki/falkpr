@@ -1,0 +1,149 @@
+id,Namn,,kommun,län,Förälder_id,År hittad
+5,KU,,,Skåne,0,1997-01-01
+6,KU2,,,Skåne,0,2004-01-01
+7,BO2,,,Skåne,0,2002-01-01
+8,MLH,,,Skåne,0,2004-01-01
+9,KVT,,,Skåne,0,2008-01-01
+10,BJÄ,,,Skåne,0,2009-01-01
+11,PM,,,Skåne,0,2009-01-01
+12,ÖK,,,Skåne,0,2011-01-01
+13,BAR,,,Skåne,0,2012-01-01
+14,SÅP,,,Skåne,0,2016-01-01
+15,SOF,,,Skåne,0,2020-01-01
+16,BLE,,Karlshamn ,Blekinge,0,2017-01-01
+17,SB,,,Halland,0,1997-01-01
+18,LAG,,,Halland,0,2012-01-01
+19,NN,,,Halland,0,1990-01-01
+20,TD1,,,Halland,0,
+21,TD2,,,Halland,20,
+22,MC1,,,Halland,0,
+23,NVK,,,Halland,0,1991-01-01
+24,SKJ,,,Halland,0,1996-01-01
+25,NVG,,,Halland,0,
+26,NDE,,,Halland,0,2001-01-01
+27,JOS,,,Halland,0,2012-01-01
+28,NDB,,,Halland,0,1997-01-01
+29,HJÄ,,,Halland,0,2003-01-01
+30,FHS,,,Halland,0,2009-01-01
+31,KBK,,,Halland,0,2010-01-01
+32,ÅL,,,Halland,0,2010-01-01
+33,ÅL2,,,Halland,32,2010-01-01
+34,TOV,,,Halland,0,2011-01-01
+35,HAL,,,Halland,0,2012-01-01
+36,KRÖ,,,Halland,0,2014-01-01
+37,DA,,,Halland,0,2016-01-01
+38,BMO,,,Halland,0,2016-01-01
+39,HIA,,,Halland,0,2017-01-01
+40,BJH,,,Halland,0,2019-01-01
+41,CHM,,,Halland,0,2020-01-01
+42,PC1,,,Västra Götalands län ,0,
+43,PC2,,,Västra Götalands län ,42,
+44,LÅ,,,Västra Götalands län ,0,2000-01-01
+45,LÅ2,,,Västra Götalands län ,44,
+46,HÅL,,,Västra Götalands län ,0,
+47,HÅL2,,,Västra Götalands län ,46,
+48,ROH,,,Västra Götalands län ,0,
+49,HEL,,,Västra Götalands län ,0,
+50,SÅK,,,Västra Götalands län ,0,2001-01-01
+51,RYD,,,Västra Götalands län ,0,
+52,KHS,,,Västra Götalands län ,0,2009-01-01
+53,JÅP,,,Västra Götalands län ,0,
+54,ASP,,,Västra Götalands län ,0,1999-01-01
+55,TOK,,,Västra Götalands län ,0,
+56,TOK2,,,Västra Götalands län ,55,2012-01-01
+57,STF,,,Västra Götalands län ,0,1999-01-01
+58,LL,,,Västra Götalands län ,0,
+59,LL2,,,Västra Götalands län ,58,
+60,BRO,,,Västra Götalands län ,0,1999-01-01
+61,KLE,,,Västra Götalands län ,0,2005-01-01
+62,AT,,,Västra Götalands län ,0,2004-01-01
+63,HH,,,Västra Götalands län ,0,
+64,HH1,,,Västra Götalands län ,63,
+65,HH2,,,Västra Götalands län ,63,2016-01-01
+66,BO,,,Västra Götalands län ,0,
+67,SKK,,,Västra Götalands län ,0,2001-01-01
+68,BB,,,Västra Götalands län ,0,
+69,LBO,,,Västra Götalands län ,0,2001-01-01
+70,BL,,,Västra Götalands län ,0,2012-01-01
+71,VAR,,,Västra Götalands län ,0,2006-01-01
+72,CGL1,,,Västra Götalands län ,0,2009-01-01
+73,CGL2,,,Västra Götalands län ,72,2009-01-01
+74,CGL3,,,Västra Götalands län ,72,2009-01-01
+75,HJ,,,Västra Götalands län ,0,2009-01-01
+76,PLY,,,Västra Götalands län ,0,2009-01-01
+77,GD,,,Västra Götalands län ,0,
+78,KDÖ,,,Västra Götalands län ,0,2011-01-01
+79,ALU,,,Västra Götalands län ,0,2011-01-01
+80,LN,,,Västra Götalands län ,0,2013-01-01
+81,RSÖ,,,Västra Götalands län ,0,2014-01-01
+82,VMB,,,Västra Götalands län ,0,2014-01-01
+83,GRA,,,Västra Götalands län ,0,2014-01-01
+84,HUL,,,Västra Götalands län ,0,2014-01-01
+85,KOV,,,Västra Götalands län ,0,2014-01-01
+86,MOL,,,Västra Götalands län ,0,2014-01-01
+87,ÖMM,,,Västra Götalands län ,0,2015-01-01
+88,SHA,,,Västra Götalands län ,0,2016-01-01
+89,ESE,,,Västra Götalands län ,0,2019-01-01
+90,MF,,,Västra Götalands län ,0,2017-01-01
+91,RAM,,,Västra Götalands län ,0,2019-01-01
+92,CGM,,,Västra Götalands län ,0,2020-01-01
+93,PLE,,,Västra Götalands län ,0,2020-01-01
+94,MAS,,,Västra Götalands län ,0,2020-01-01
+95,TUL,,,Västra Götalands län ,0,2020-01-01
+96,RB,,,Västra Götalands län ,0,2020-01-01
+97,ASK,,,Västra Götalands län ,0,2020-01-01
+98,RLJU,,,Västra Götalands län ,0,2020-01-01
+99,ROM,,,Bohuslän,0,1999-01-01
+100,OH,,,Bohuslän,0,1977-01-01
+101,LO,,,Bohuslän,0,
+102,OV,,,Bohuslän,0,
+103,ROC,,,Bohuslän,0,
+104,FF,,,Bohuslän,0,1992-01-01
+105,ROL,,,Bohuslän,0,
+106,PL,,,Bohuslän,0,1990-01-01
+107,TJÅ,,,Bohuslän,0,
+108,OS,,,Bohuslän,0,
+109,GÅS,,,Bohuslän,0,2012-01-01
+110,OG,,,Bohuslän,0,
+111,ML,,,Bohuslän,0,1990-01-01
+112,SX,,,Bohuslän,0,2011-01-01
+113,BX,,,Bohuslän,0,2014-01-01
+114,WIK,,,Bohuslän,0,1996-01-01
+115,OM,,,Bohuslän,0,1988-01-01
+116,RX,,,Bohuslän,0,
+117,AS,,,Bohuslän,0,1996-01-01
+118,MB=AS2,,,Bohuslän,117,
+119,OR,,,Bohuslän,0,1995-01-01
+120,HIX,,,Bohuslän,0,2002-01-01
+121,RHX,,,Bohuslän,0,
+122,HIF,,,Bohuslän,0,
+123,HIF2,,,Bohuslän,122,
+124,VAS,,,Bohuslän,0,
+125,TOM,,,Bohuslän,0,2009-01-01
+126,TOM2,,,Bohuslän,125,2009-01-01
+127,RÅG ,,,Bohuslän,0,2009-01-01
+128,OD,,,Bohuslän,0,2009-01-01
+129,OD2,,,Bohuslän,128,2011-01-01
+130,OSK,,,Bohuslän,0,2012-01-01
+131,PAT,,,Bohuslän,0,2010-01-01
+132,OXO,,,Bohuslän,0,2010-01-01
+133,UDD,,,Bohuslän,0,2010-01-01
+134,UDD2,,,Bohuslän,133,2010-01-01
+135,ORR,,,Bohuslän,0,2016-01-01
+136,HX,,,Bohuslän,0,2011-01-01
+137,BOB,,,Bohuslän,0,2012-01-01
+138,OL,,,Bohuslän,0,2013-01-01
+139,OF2,,,Bohuslän,140,2015-01-01
+140,OF,,,Bohuslän,0,2008-01-01
+141,NÄM,,,Bohuslän,0,2015-01-01
+142,OÄ,,,Bohuslän,0,1998-01-01
+143,LÅN,,,Bohuslän,0,2017-01-01
+144,OKW,,,Bohuslän,0,2017-01-01
+145,GER,,,Bohuslän,0,2019-01-01
+146,STE ,,,Bohuslän,0,2020-01-01
+147,BJÖ,,,Bohuslän,0,1999-01-01
+148,OK,,,Bohuslän,0,2020-01-01
+149,OGV,,,Bohuslän,0,2020-01-01
+150,MAN,,,Bohuslän,0,2020-01-01
+151,TOR,,,Bohuslän,0,2020-01-01
+152,BRA,,,Bohuslän,0,2020-01-01
